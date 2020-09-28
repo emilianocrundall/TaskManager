@@ -1,0 +1,627 @@
+.app_container{
+    width: 100%;
+    min-height: 100vh;
+    background-color:#eeeeee;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 0;
+    margin: 0
+}
+
+/* auth forms styles  */
+
+.auth_form{
+    margin-top: 60px;
+    height: fit-content;
+    grid-column: 2;
+    padding: 18px;
+    border-radius: 20px;
+    background-color: #313B49;
+}
+.title{
+    color: white;
+    text-align: center;
+    padding: 14px;
+}
+.custom_input{
+    background: transparent;
+    border-radius: 18px;
+    padding: 8px;
+    border: 2px solid #495567;
+    color: #868B96;
+    width: 100%
+}
+.custom_input::placeholder{
+    color: #495567
+}
+.custom_input:focus::-webkit-input-placeholder {
+    color:#FA3183;
+}
+.custom_input:focus{
+    outline: none;
+    border: 2px solid #FA3183;
+}
+.full_button, .full_button_d{
+    width: 100%;
+    color: white;
+    border: none;
+    border-radius: 18px;
+    padding: 8px;
+    margin-top: 8px;
+    background-color: #FA3183;
+    transition: 0.3s
+}
+.full_button:hover{
+    transition: 0.3s;
+    background-color: #d3447d;
+}
+.full_button_alt{
+    background:transparent;
+    border: 2px solid #d3447d;
+    color: #d3447d;
+    padding: 8px;
+    border-radius: 18px;
+    transition: 0.3s
+}
+.full_button_alt:hover{
+    transition: 0.3s;
+    color: #eeeeee;
+    border: 2px solid #eeeeee;
+}
+.display_error{
+    width: 100%;
+    color: white;
+    border-radius: 18px;
+    padding: 8px;
+    margin-top: 4px;
+    background-color: #FA3183;
+}
+.auth_form p{
+    text-align: right;
+    color: white
+}
+.link{
+    color: #868B96;
+    transition: 0.3s;
+}
+.link:hover{
+    color: white;
+    transition: 0.3s;
+}
+/* styles for the menu  */
+.menu{
+    grid-column: 1;
+    padding: 20px;
+    background-color: #313B49;
+    border-radius: 20px;
+    margin: 60px;
+}
+.menu nav{
+    padding-top: 15px;
+    height: 70%;
+}
+.menu nav ul{
+    list-style: none;
+    padding-left: 0
+}
+.menu ul li{
+    padding: 6px 4px 6px 4px
+}
+.menu_link{
+    color: #868B96;
+    font-size: 16px;
+    transition: 0.3s;
+    padding: 8px;
+    border-radius: 14px;
+}
+.menu_link span{
+    padding-left: 6px
+}
+#logout_li{
+    border:none;
+    background: transparent;
+    font-size: 16px;
+    display: none
+}
+.menu_link:hover, #logout_li button:hover{
+    text-decoration: none;
+    background-color: #495567;
+    border-radius: 16px;
+    color: white;
+    transition: 0.3s
+}
+.menu_logout{
+    bottom: 0
+}
+
+/* styles for the components target by the links in the side menu */
+
+.second_cont{
+    grid-column: 2/4;
+    margin: 60px 60px 60px 0px;
+    background-color: #313B49;
+    border-radius: 20px;
+    padding: 12px
+}
+
+.header{
+    border-bottom: 2px solid #495567;
+    padding: 12px;
+    display: inline-flex;
+    width: 100%
+}
+.header h4{
+    color: white
+}
+.header button{
+    border: none;
+    background: transparent;
+    color: #5DCB9A;
+    transition: 0.3s
+}
+.full_button:focus,
+.header button:focus,
+.new_task_form input:focus,
+.new_task_form select:focus,
+.add_button:focus,
+.full_button_alt:focus{
+    outline: none;
+}
+.header button:hover{
+    color: white;
+    transition: 0.3s
+}
+
+/* new task form styles */
+
+.new_task_form{
+    padding: 20px;
+    width: 60%;
+    margin: auto
+}
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+.new_task_form input, .new_task_form select{
+    width: 100%;
+    color: #868B96;
+    padding: 8px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #495567;
+}
+.new_task_form input::placeholder{
+    color: #868B96
+}
+.new_task_form input:focus, .new_task_form select:focus{
+    border-bottom: 2px solid #d3447d;
+}
+
+/*new categories styles*/
+
+.add_button{
+    background-color: #5DCB9A;
+    text-align: center;
+    border: none;
+    color: white;
+    padding: 8px;
+    border-radius: 18px;
+    transition: 0.3s;
+    width: 30%
+}
+.add_button:hover, .cat_link:hover{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    background-color: #1ca869;
+}
+
+.no_content{
+    color: white;
+}
+.no_content i{
+    color: #495567;
+    font-size: 70px;
+    padding: 10px;
+}
+.center_button{
+    display: flex;
+    justify-content: center;
+}
+.add_cat{
+    width: 100%;
+    border-bottom: 2px solid #495567;
+}
+.add_cat form{
+    width: 60%;
+    margin: auto
+}
+
+/**/
+.custom_modal .modal-content{
+    background-color: #313B49;
+    color: white
+}
+
+/* styles for categories component */
+.sm_cont{
+    padding: 20px;
+    width: auto;
+}
+.cat_link{
+    margin:4px ;
+    background-color: #5DCB9A;
+    color: white;
+    padding: 12px 20px 12px 20px;
+    border: none;
+    border-radius: 12px
+}
+.cat_link{
+    float: left
+}
+
+/* styles for the maping of tasks */
+
+.task{
+    width: 100%;
+    display: inline-block;
+    border-bottom: 2px solid #495567;
+    color: #eeeeee;
+    padding: 6px;
+    transition: 0.3s;
+}
+.task:hover{
+    background-color: #495567;
+    transition: 0.3s;
+    color: #eeeeee;
+    text-decoration: none;
+}
+#first{
+    float: left;
+}
+#second{
+    float: right;
+}
+#second i{
+    font-size: 25px
+}
+
+/* styles for the details task component*/
+.task_details{
+    background-color: #495567;
+    margin:20px;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 20px;
+    color: white
+}
+.button_cont{
+    width: 100%;
+    text-align: right;
+}
+.done_button{
+    border: none;
+    color: #eeeeee;
+    font-size: 45px;
+    font-weight: bolder;
+    background: transparent;
+    transition: 0.3s;
+}
+.done_button:hover, #done{
+    color: #5DCB9A;
+    transition: 0.3s
+}
+.done_button:focus{
+    outline: none
+}
+#done:hover{
+    color: #1ca869;
+    transition: 0.3s
+}
+.actions{
+    border-top: 2px solid #495567;
+    display: inline-block;
+    padding: 20px;
+    width: 100%
+}
+.actions button{
+    margin: 5px
+}
+#green{
+    float: right;
+    width: 47%
+}
+#pink{
+    float: left;
+    width: 47%
+}
+
+/* modal delete styles  */
+
+.button_container{
+    width: 100%
+}
+.button_container button{
+    width: 47%;
+    margin: 5px
+}
+.button_container button:first-child{
+    float: left;
+    padding: 7px
+}
+.button_container button:last-child{
+    float: right;
+}
+
+/* pagination styles  */
+.custom_navigate{
+    text-align: center;
+    position: absolute;
+    width: 60%
+}
+.custom_navigate ul{
+    margin: 0;
+    padding: 0;
+}
+.custom_navigate ul li{
+    list-style: none;
+    display: inline
+}
+.paginate_button{
+    border: none;
+    padding: 6px 10px 6px 10px;
+    margin: 3px;
+    border-radius: 7px;
+    color: #eeeeee;
+    background-color: #495567;
+    transition: 0.3s
+}
+.paginate_button:focus{
+    outline: none;
+}
+.paginate_button:hover{
+    background-color: #868B96;
+    transition: 0.3s
+}
+
+/* ######### RESPONSIVE ######## */
+@media (min-width: 320px) and (max-width: 481px){
+    .app_container{
+        background-color: #313B49;
+    }
+    .auth_form{
+        grid-column: 1/4;
+        margin: 15px;
+        margin-top: 40px
+    }
+    .header{
+        padding: 8px
+    }
+    /* styles for the menu */
+    .menu{
+        grid-column: 1/4;
+        padding: 0;
+        border-radius: 30px;
+        margin: 8px;
+        position: fixed;
+        bottom: 0;
+        width: 95%;
+        height: auto;
+        background-color: #495567;
+        z-index: 9;
+    }
+    .menu .text-center h5{
+        display: none
+    }
+    .menu nav{
+        padding: 0;
+        height: auto;
+        text-align: center;
+        width: 100%;
+        
+    }
+    .menu nav ul{
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+    }
+    .menu ul li{
+        display: inline;
+    }
+    .menu_link{
+        font-size: 20px;
+        padding: 8px;
+        border-radius: 14px;
+    }
+    .menu_link span{
+        display: none
+    }
+    #logout_li{
+        display: inline-block
+    }
+    #logout_li button{
+        background: transparent;
+        border: none
+    }
+    .menu_logout{
+        display: none
+    }
+    /* styles for the components target by the links in the side menu */
+    .second_cont{
+        grid-column: 1/4;
+        width: 100%;
+        margin: 0px!important;
+        background-color: #313B49;
+        border-radius: 0;
+        padding: 12px;
+        padding-bottom: 70px;
+    }
+    /* styles for the add task component  */
+    .new_task_form{
+        padding: 20px;
+        width: 100%;
+        margin: auto
+    }
+    /* task maping styles */
+    .task{
+        padding: 4px
+    }
+    .task p, .task span{
+        font-size: 14px
+    }
+    /* styles for the details task component*/
+    .task_details{
+        margin:8px;
+        margin-top: 30px;
+        padding: 10px;
+    }
+    .done_button{
+        font-size: 30px;
+    }
+    .actions{
+        padding: 10px;
+        width: 100%
+    }
+    .actions button{
+        margin: 5px
+    }
+    #green{
+        width: 45%
+    }
+    #pink{
+        width: 45%
+    }
+    /* paginate styles */
+    .custom_navigate{
+        padding-bottom: 30px;
+        width: 90%;
+        position: relative;
+        z-index: 0;
+    }
+    /* categories styles  */
+    .add_cat{
+        padding: 10px
+    }
+    .add_cat form{
+        width: 90%
+    }
+    .sm_cont{
+        padding: 4px
+    }
+    .cat_link{
+        float: left
+    }
+    /* modal delete styles  */
+    .button_container button{
+        width: 43%;
+    }
+}
+@media (min-width: 482px) and (max-width: 768px){
+    .app_container{
+        grid-template-columns: 26% 37% 37%;
+    }
+    .auth_form{
+        grid-column: 1/4;
+        margin: 40px
+    }
+    /* styles for the side menu  */
+    .menu{
+        border-radius: 0px;
+        border-right: 2px solid #495567;
+        margin: 0px;
+    }
+    .menu nav{
+        height: 60%;
+        text-align: center;
+    }
+    .menu nav{
+        margin:0;
+        padding: 0;
+        padding-top: 20px
+    }
+    .menu_link{
+        font-size: 22px
+    }
+    .menu_link span{
+        display: none
+    }
+    /* styles for the components target by the links in the side menu */
+
+    .second_cont{
+        margin:0px;
+        border-radius: 0px;
+        padding: 8px
+    }
+    /* add task styles  */
+    .new_task_form{
+        padding: 10px;
+        width: 80%;
+    }
+    /* styles for the maping of tasks */
+    .task{
+        padding: 4px
+    }
+    .task p, .task span{
+        font-size: 16px
+    }
+    /* task details styles */
+    .task_details{
+        margin:8px;
+        margin-top: 30px;
+        padding: 10px;
+    }
+    .done_button{
+        font-size: 30px;
+    }
+    .actions{
+        padding: 10px;
+        width: 100%
+    }
+    .actions button{
+        margin: 5px
+    }
+    #green{
+        width: 45%
+    }
+    #pink{
+        width: 45%
+    }
+    /* categories styles */
+    .add_cat{
+        padding: 10px
+    }
+    .add_cat form{
+        width: 85%
+    }
+    .sm_cont{
+        padding: 4px
+    }
+    .cat_link{
+        float: left
+    }
+}
+@media (min-width: 769px) and (max-width: 1023px){
+    /* styles for the menu  */
+    .menu{
+        padding: 20px;
+        border-radius: 20px;
+        margin: 30px;
+    }
+    .menu nav{
+        padding-top: 15px;
+        height: 70%;
+    }
+    /* styles for the components target by the links in the side menu */
+
+    .second_cont{
+        margin:30px 30px 30px 0px;
+        padding: 8px
+    }
+    /* categories styles */
+    .add_cat{
+        padding: 10px
+    }
+    .cat_link{
+        float: left
+    }
+}
